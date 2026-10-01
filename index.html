@@ -1,0 +1,5530 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOBOKO Korwil Hiji Sumedang</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#071426;
+color:#f5f5f5;
+line-height:1.6
+}
+
+a{color:inherit;text-decoration:none}
+
+img{max-width:100%;display:block}
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(5,18,38,.96);
+border-bottom:1px solid #d4af37;
+backdrop-filter:blur(10px)
+}
+
+.header-inner{
+max-width:1200px;
+margin:auto;
+padding:12px 18px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px
+}
+
+.header-logos{
+display:flex;
+align-items:center;
+gap:6px
+}
+
+.header-logos img{
+width:48px;
+height:48px;
+object-fit:contain;
+animation:bobokoBlink 1.8s infinite
+}
+
+.logo-text h1{
+color:#d4af37;
+font-size:20px;
+animation:bobokoBlink 1.8s infinite
+}
+
+.logo-text p{
+font-size:12px;
+color:#ddd
+}
+
+@keyframes bobokoBlink{
+0%,100%{opacity:1;transform:scale(1)}
+50%{opacity:.45;transform:scale(1.04)}
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:6px
+}
+
+nav a{
+padding:7px 9px;
+border-radius:7px;
+font-size:12px
+}
+
+nav a:hover{
+background:#d4af37;
+color:#071426
+}
+
+.marquee{
+background:#d4af37;
+color:#071426;
+padding:8px;
+font-weight:bold;
+overflow:hidden
+}
+
+.developer-watermark{
+position:fixed;
+right:14px;
+top:60%;
+transform:translateY(-50%);
+z-index:9999;
+color:#d4af37;
+font-size:11px;
+font-weight:bold;
+letter-spacing:.4px;
+text-align:right;
+opacity:.65;
+pointer-events:none;
+text-shadow:0 0 8px rgba(212,175,55,.45);
+animation:developerFloat 3s ease-in-out infinite
+}
+
+.developer-watermark span{
+display:block;
+font-size:9px;
+font-weight:normal;
+opacity:.8;
+margin-top:1px
+}
+
+@keyframes developerFloat{
+0%,100%{transform:translateY(-50%)}
+50%{transform:translateY(calc(-50% - 5px))}
+}
+
+section{
+max-width:1200px;
+margin:auto;
+padding:65px 18px
+}
+
+.section-title{
+text-align:center;
+margin-bottom:35px
+}
+
+.section-title h2{
+color:#d4af37;
+font-size:30px
+}
+
+.section-title p{
+color:#ccc
+}
+
+.card{
+background:rgba(15,35,62,.85);
+border:1px solid rgba(212,175,55,.35);
+border-radius:15px;
+padding:22px;
+box-shadow:0 10px 30px rgba(0,0,0,.25)
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px
+}
+
+.hero{
+min-height:620px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:radial-gradient(circle at center,#17375e 0%,#071426 65%)
+}
+
+.hero-content{
+max-width:850px
+}
+
+.hero-logos{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+margin-bottom:20px
+}
+
+.hero-logos img{
+width:110px;
+height:110px;
+object-fit:contain
+}
+
+.hero h2{
+font-size:42px;
+color:#d4af37
+}
+
+.hero h3{
+font-size:25px;
+margin:8px 0
+}
+
+.hero p{
+color:#ddd;
+max-width:700px;
+margin:15px auto
+}
+
+.clock{
+margin-top:25px;
+font-size:28px;
+color:#d4af37;
+font-weight:bold
+}
+
+.date-now{
+color:#ddd
+}
+
+.btn{
+display:inline-block;
+border:none;
+border-radius:8px;
+padding:11px 17px;
+cursor:pointer;
+font-weight:bold;
+margin:5px;
+background:#d4af37;
+color:#071426
+}
+
+.btn:hover{opacity:.85}
+
+.btn-danger{
+background:#b83232;
+color:#fff
+}
+
+.btn-blue{
+background:#1976d2;
+color:#fff
+}
+
+.btn-green{
+background:#238636;
+color:#fff
+}
+
+.btn-dark{
+background:#162b47;
+color:#fff;
+border:1px solid #d4af37
+}
+
+.pengurus-card{
+text-align:center
+}
+
+.pengurus-card .jabatan{
+color:#d4af37;
+font-weight:bold
+}
+
+.pengurus-card .nama{
+margin-top:8px;
+font-size:18px
+}
+
+.program-icon{
+font-size:40px;
+margin-bottom:10px
+}
+
+.form-group{
+margin-bottom:15px
+}
+
+.form-group label{
+display:block;
+margin-bottom:6px;
+color:#d4af37;
+font-weight:bold
+}
+
+input,textarea,select{
+width:100%;
+padding:11px;
+border-radius:8px;
+border:1px solid #45617e;
+background:#081a30;
+color:#fff;
+outline:none
+}
+
+input:focus,textarea:focus,select:focus{
+border-color:#d4af37
+}
+
+textarea{
+min-height:110px;
+resize:vertical
+}
+
+.guestbook-form{
+max-width:800px;
+margin:auto
+}
+
+.rating-input{
+display:flex;
+flex-direction:row-reverse;
+justify-content:flex-end;
+gap:4px;
+margin-top:5px
+}
+
+.rating-input input{
+display:none
+}
+
+.rating-input label{
+font-size:30px;
+color:#45617e;
+cursor:pointer;
+transition:.2s
+}
+
+.rating-input label:hover,
+.rating-input label:hover~label,
+.rating-input input:checked~label{
+color:#d4af37
+}
+
+.rating-help{
+font-size:12px;
+color:#aaa;
+margin-top:3px
+}
+
+.guestbook-list{
+margin-top:30px
+}
+
+.guestbook-card{
+position:relative
+}
+
+.guestbook-card .guestbook-stars{
+color:#d4af37;
+font-size:20px;
+letter-spacing:2px;
+margin-bottom:7px
+}
+
+.guestbook-card .guestbook-name{
+font-weight:bold;
+color:#fff;
+font-size:17px
+}
+
+.guestbook-card .guestbook-region{
+color:#aaa;
+font-size:13px
+}
+
+.guestbook-card .guestbook-type{
+display:inline-block;
+margin-top:8px;
+padding:4px 9px;
+border-radius:20px;
+font-size:11px;
+font-weight:bold;
+background:#162b47;
+border:1px solid #45617e;
+color:#d4af37
+}
+
+.guestbook-card .guestbook-message{
+margin-top:12px;
+color:#ddd;
+white-space:pre-line
+}
+
+.guestbook-card .guestbook-date{
+margin-top:12px;
+font-size:12px;
+color:#888
+}
+
+.guestbook-empty{
+text-align:center;
+padding:25px;
+color:#aaa
+}
+
+.stat{
+text-align:center
+}
+
+.stat-number{
+font-size:38px;
+color:#d4af37;
+font-weight:bold
+}
+
+.stat-label{
+color:#ccc
+}
+
+.news-card h3{
+color:#d4af37;
+margin-bottom:8px
+}
+
+.document-card{
+text-align:center
+}
+
+.doc-upload-box{
+border:1px dashed #d4af37;
+padding:18px;
+border-radius:12px;
+background:#081a30;
+margin-bottom:20px
+}
+
+.document-upload-card{
+text-align:center
+}
+
+.document-upload-card .file-icon{
+font-size:48px;
+margin-bottom:10px
+}
+
+.gallery-filter{
+text-align:center;
+margin-bottom:25px
+}
+
+.gallery-item{
+overflow:hidden
+}
+
+.gallery-item img,
+.gallery-item video{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:12px;
+background:#020812
+}
+
+.gallery-item img{
+min-height:220px
+}
+
+.gallery-item h4{
+color:#d4af37
+}
+
+.gallery-item p{
+color:#bbb;
+font-size:13px
+}
+
+.gallery-empty{
+text-align:center;
+padding:30px;
+color:#aaa
+}
+
+.calendar-box{
+max-width:800px;
+margin:auto
+}
+
+.calendar-header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:10px;
+margin-bottom:20px
+}
+
+.calendar-header h3{
+color:#d4af37;
+text-align:center;
+flex:1
+}
+
+.calendar-photo{
+width:100%;
+max-height:350px;
+object-fit:cover;
+border-radius:15px;
+border:2px solid #d4af37;
+margin-bottom:10px
+}
+
+.photo-caption{
+text-align:center;
+color:#ccc;
+margin-bottom:20px
+}
+
+.calendar-grid{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:5px
+}
+
+.calendar-day-name{
+text-align:center;
+color:#d4af37;
+font-weight:bold;
+padding:7px 0
+}
+
+.calendar-day{
+min-height:55px;
+background:#0e2744;
+border-radius:7px;
+padding:8px;
+text-align:center
+}
+
+.calendar-day.today{
+border:2px solid #d4af37;
+color:#d4af37;
+font-weight:bold
+}
+
+.admin-section{
+background:#06101e;
+border-top:1px solid rgba(212,175,55,.25)
+}
+
+.admin-login{
+max-width:450px;
+margin:auto
+}
+
+.admin-panel{
+display:none
+}
+
+.admin-tabs{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-bottom:20px
+}
+
+.admin-tabs button{
+padding:10px 14px;
+background:#102844;
+color:#fff;
+border:1px solid #38516d;
+border-radius:7px;
+cursor:pointer
+}
+
+.admin-tabs button.active{
+background:#d4af37;
+color:#071426;
+border-color:#d4af37
+}
+
+.admin-content{
+display:none
+}
+
+.admin-content.active{
+display:block
+}
+
+.admin-record{
+padding:15px;
+background:#0d2139;
+border:1px solid #294563;
+border-radius:10px;
+margin-bottom:10px
+}
+
+.admin-record strong{
+color:#d4af37
+}
+
+.admin-actions{
+margin-top:10px
+}
+
+.guestbook-status{
+display:inline-block;
+padding:4px 9px;
+border-radius:20px;
+font-size:11px;
+font-weight:bold;
+margin-top:7px
+}
+
+.guestbook-status.pending{
+background:#4a3a12;
+color:#ffd76a;
+border:1px solid #d4af37
+}
+
+.guestbook-status.approved{
+background:#123d24;
+color:#9be7b1;
+border:1px solid #238636
+}
+
+.guestbook-status.rejected{
+background:#451b1b;
+color:#ffaaaa;
+border:1px solid #b83232
+}
+
+.guestbook-admin-filter{
+display:flex;
+flex-wrap:wrap;
+gap:6px;
+margin:15px 0
+}
+
+.guestbook-admin-filter button{
+padding:8px 12px;
+border-radius:7px;
+border:1px solid #38516d;
+background:#102844;
+color:#fff;
+cursor:pointer
+}
+
+.guestbook-admin-filter button.active{
+background:#d4af37;
+color:#071426;
+border-color:#d4af37
+}
+
+.status-box{
+margin:10px 0;
+padding:10px;
+border-radius:8px;
+display:none;
+font-size:14px
+}
+
+.status-success{
+display:block;
+background:#123d24;
+border:1px solid #238636;
+color:#9be7b1
+}
+
+.status-error{
+display:block;
+background:#451b1b;
+border:1px solid #b83232;
+color:#ffaaaa
+}
+
+.loading{
+text-align:center;
+padding:20px;
+color:#bbb
+}
+
+footer{
+text-align:center;
+padding:30px 15px;
+background:#040c17;
+border-top:1px solid #d4af37;
+color:#bbb
+}
+
+footer strong{
+color:#d4af37
+}
+
+@media(max-width:700px){
+
+.header-inner{
+flex-direction:column
+}
+
+.logo-area{
+width:100%;
+justify-content:center
+}
+
+.header-logos img{
+width:43px;
+height:43px
+}
+
+.logo-text h1{
+font-size:19px
+}
+
+nav{
+max-height:220px;
+overflow:auto
+}
+
+.hero h2{
+font-size:31px
+}
+
+.hero h3{
+font-size:20px
+}
+
+.hero-logos img{
+width:80px;
+height:80px
+}
+
+.calendar-day{
+min-height:45px;
+padding:5px;
+font-size:12px
+}
+
+.developer-watermark{
+right:9px;
+top:60%;
+font-size:10px
+}
+
+.developer-watermark span{
+font-size:8px
+}
+
+.rating-input label{
+font-size:27px
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="developer-watermark">
+Rudy Buana Santosa
+<span>Web - Developer</span>
+</div>
+
+<header>
+<div class="header-inner">
+
+<div class="logo-area">
+
+<div class="header-logos">
+<img src="logo/logo-boboko.png" alt="BOBOKO">
+<img src="logo/logo-persib.png" alt="Persib">
+</div>
+
+<div class="logo-text">
+<h1>BOBOKO</h1>
+<p>Korwil Hiji Sumedang</p>
+</div>
+
+</div>
+
+<nav>
+<a href="#beranda">Beranda</a>
+<a href="#tentang">Tentang</a>
+<a href="#pengurus">Pengurus</a>
+<a href="#program">Program</a>
+<a href="#registrasi">Registrasi</a>
+<a href="#dashboard">Dashboard</a>
+<a href="#kalender">Kalender</a>
+<a href="#berita">Berita</a>
+<a href="#dokumen">Dokumen</a>
+<a href="#galeri">Galeri</a>
+<a href="#buku-tamu">Buku Tamu</a>
+<a href="#admin">Admin</a>
+<a href="#kontak">Kontak</a>
+</nav>
+
+</div>
+</header>
+
+<div class="marquee">
+<marquee>
+SELAMAT DATANG DI WEBSITE RESMI SEKRETARIAT BOBOKO KORWIL HIJI SUMEDANG
+</marquee>
+</div>
+
+<section id="beranda" class="hero">
+<div class="hero-content">
+
+<div class="hero-logos">
+<img src="logo/logo-boboko.png" alt="BOBOKO">
+<img src="logo/logo-persib.png" alt="Persib">
+</div>
+
+<h2>BOBOKO</h2>
+
+<h3>Korwil Hiji Sumedang</h3>
+
+<p>
+Website resmi Sekretariat BOBOKO Korwil 1 Sumedang.
+Media informasi, komunikasi, kegiatan, silaturahmi,
+dan kebersamaan keluarga besar BOBOKO.
+</p>
+
+<div class="clock" id="digitalClock">
+00:00:00
+</div>
+
+<div class="date-now" id="dateNow">
+Senin, 1 Januari 2026
+</div>
+
+</div>
+</section>
+
+<section id="tentang">
+
+<div class="section-title">
+<h2>Tentang BOBOKO</h2>
+<p>Informasi Sekretariat Korwil Hiji Sumedang</p>
+</div>
+
+<div class="card">
+
+<p>
+BOBOKO Korwil Hiji Sumedang merupakan wadah silaturahmi,
+kebersamaan, komunikasi, serta kegiatan positif anggota
+yang berada di wilayah Sumedang.
+</p>
+
+<br>
+
+<p>
+Website ini dibuat sebagai pusat informasi digital untuk
+mendukung kegiatan organisasi, publikasi kegiatan,
+pendataan pengurus dan anggota, serta dokumentasi.
+</p>
+
+</div>
+</section>
+
+<section id="pengurus">
+
+<div class="section-title">
+<h2>Pengurus</h2>
+<p>Struktur Pengurus BOBOKO Korwil Hiji Sumedang</p>
+</div>
+
+<div id="publicPengurus" class="grid">
+<div class="loading">Memuat data pengurus...</div>
+</div>
+
+</section>
+
+<section id="program">
+
+<div class="section-title">
+<h2>Program</h2>
+<p>Kegiatan dan agenda BOBOKO</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="program-icon">🤝</div>
+<h3>Silaturahmi</h3>
+<p>
+Mempererat hubungan antaranggota dan keluarga besar BOBOKO.
+</p>
+</div>
+
+<div class="card">
+<div class="program-icon">❤️</div>
+<h3>Kegiatan Sosial</h3>
+<p>
+Kegiatan sosial dan kepedulian terhadap masyarakat.
+</p>
+</div>
+
+<div class="card">
+<div class="program-icon">⚽</div>
+<h3>Kegiatan Bersama</h3>
+<p>
+Mendukung kegiatan bersama dan kebersamaan anggota.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="registrasi">
+
+<div class="section-title">
+<h2>Registrasi</h2>
+<p>Formulir pendaftaran anggota BOBOKO</p>
+</div>
+
+<div class="card">
+
+<form
+action="https://formboost.app/f/r4youj8d"
+method="POST"
+>
+
+<div class="form-group">
+<label>Nama Lengkap</label>
+<input type="text" name="nama" required>
+</div>
+
+<div class="form-group">
+<label>No. WhatsApp</label>
+<input type="tel" name="whatsapp" required>
+</div>
+
+<div class="form-group">
+<label>Alamat</label>
+<textarea name="alamat" required></textarea>
+</div>
+
+<div class="form-group">
+<label>Keterangan</label>
+<textarea
+name="keterangan"
+placeholder="Contoh: Anggota / Simpatisan / Lainnya"></textarea>
+</div>
+
+<button class="btn" type="submit">
+📋 KIRIM REGISTRASI
+</button>
+
+</form>
+
+</div>
+</section>
+
+<section id="dashboard">
+
+<div class="section-title">
+<h2>Dashboard</h2>
+<p>Sekretariat Korwil Hiji</p>
+</div>
+
+<div class="card">
+
+<h2 style="text-align:center;color:#d4af37;">
+BOBOKO KORWIL HIJI SUMEDANG
+</h2>
+
+<p style="text-align:center;color:#ccc;">
+Sekretariat Korwil Hiji
+</p>
+
+<br>
+
+<div class="grid">
+
+<div class="stat">
+<div class="stat-number" id="statPengurus">0</div>
+<div class="stat-label">Pengurus</div>
+</div>
+
+<div class="stat">
+<div class="stat-number" id="statAnggota">0</div>
+<div class="stat-label">Anggota</div>
+</div>
+
+<div class="stat">
+<div class="stat-number" id="statProgram">0</div>
+<div class="stat-label">Kegiatan</div>
+</div>
+
+<div class="stat">
+<div class="stat-number" id="statGallery">0</div>
+<div class="stat-label">Dokumentasi</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="kalender">
+
+<div class="section-title">
+<h2>Kalender BOBOKO</h2>
+<p>Kalender digital BOBOKO Korwil Hiji Sumedang</p>
+</div>
+
+<div class="calendar-box card">
+
+<div class="calendar-header">
+
+<button
+class="btn btn-dark"
+type="button"
+onclick="prevMonth()">
+◀
+</button>
+
+<h3 id="monthYear">
+September 2026
+</h3>
+
+<button
+class="btn btn-dark"
+type="button"
+onclick="nextMonth()">
+▶
+</button>
+
+</div>
+
+<img
+id="calendarPhoto"
+class="calendar-photo"
+src="logo/photo1.png"
+alt="Kegiatan BOBOKO"
+>
+
+<div id="photoCaption" class="photo-caption">
+📸 Kegiatan BOBOKO — September 2026
+</div>
+
+<div id="calendarGrid" class="calendar-grid"></div>
+
+<br>
+
+<div style="text-align:center;">
+
+<button
+class="btn"
+type="button"
+onclick="orderCalendar()">
+🛒 PESAN KALENDER Rp20.000
+</button>
+
+</div>
+
+</div>
+</section>
+
+<section id="berita">
+
+<div class="section-title">
+<h2>Berita & Kegiatan</h2>
+<p>Informasi terbaru</p>
+</div>
+
+<div id="publicNews" class="grid">
+<div class="loading">Memuat berita...</div>
+</div>
+
+</section>
+
+<section id="dokumen">
+
+<div class="section-title">
+<h2>Dokumen</h2>
+<p>Dokumen organisasi</p>
+</div>
+
+<div id="publicDocuments" class="grid">
+<div class="loading">Memuat dokumen...</div>
+</div>
+
+</section>
+
+<section id="galeri">
+
+<div class="section-title">
+<h2>Galeri</h2>
+<p>Dokumentasi kegiatan BOBOKO</p>
+</div>
+
+<div class="gallery-filter">
+
+<button
+class="btn btn-dark"
+type="button"
+onclick="renderGallery('Semua')">
+Semua
+</button>
+
+<button
+class="btn btn-dark"
+type="button"
+onclick="renderGallery('Kegiatan')">
+Kegiatan
+</button>
+
+<button
+class="btn btn-dark"
+type="button"
+onclick="renderGallery('Dokumentasi')">
+Dokumentasi
+</button>
+
+</div>
+
+<div id="publicGallery" class="grid">
+<div class="loading">Memuat galeri...</div>
+</div>
+
+</section>
+
+<section id="buku-tamu">
+
+<div class="section-title">
+<h2>📖 Buku Tamu</h2>
+<p>Sampaikan saran, kritik, dan testimoni untuk BOBOKO Korwil Hiji Sumedang</p>
+</div>
+
+<div class="card guestbook-form">
+
+<form onsubmit="submitGuestbook(event)">
+
+<div class="form-group">
+<label>Nama Lengkap</label>
+
+<input
+id="guestName"
+type="text"
+maxlength="100"
+placeholder="Nama Anda"
+required>
+
+</div>
+
+<div class="form-group">
+<label>Wilayah / Kecamatan</label>
+
+<input
+id="guestRegion"
+type="text"
+maxlength="100"
+placeholder="Contoh: Tanjungsari">
+
+</div>
+
+<div class="form-group">
+<label>Jenis Pesan</label>
+
+<select id="guestType" required>
+
+<option value="Testimoni">
+Testimoni
+</option>
+
+<option value="Saran">
+Saran
+</option>
+
+<option value="Kritik">
+Kritik
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Rating</label>
+
+<div class="rating-input">
+
+<input
+type="radio"
+id="star5"
+name="guestRating"
+value="5"
+checked>
+
+<label for="star5" title="5 bintang">★</label>
+
+<input
+type="radio"
+id="star4"
+name="guestRating"
+value="4">
+
+<label for="star4" title="4 bintang">★</label>
+
+<input
+type="radio"
+id="star3"
+name="guestRating"
+value="3">
+
+<label for="star3" title="3 bintang">★</label>
+
+<input
+type="radio"
+id="star2"
+name="guestRating"
+value="2">
+
+<label for="star2" title="2 bintang">★</label>
+
+<input
+type="radio"
+id="star1"
+name="guestRating"
+value="1">
+
+<label for="star1" title="1 bintang">★</label>
+
+</div>
+
+<div class="rating-help">
+Pilih rating 1 sampai 5 bintang.
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>Pesan</label>
+
+<textarea
+id="guestMessage"
+maxlength="1000"
+placeholder="Tulis saran, kritik, atau testimoni Anda..."
+required></textarea>
+
+</div>
+
+<div id="guestbookStatus" class="status-box"></div>
+
+<button
+class="btn"
+type="submit">
+📖 KIRIM BUKU TAMU
+</button>
+
+</form>
+
+</div>
+
+<br>
+
+<div class="section-title">
+<h2 style="font-size:24px;">
+💬 Testimoni & Pesan Pengunjung
+</h2>
+<p>
+Pesan yang ditampilkan telah disetujui oleh admin.
+</p>
+</div>
+
+<div
+id="publicGuestbook"
+class="grid guestbook-list">
+
+<div class="loading">
+Memuat Buku Tamu...
+</div>
+
+</div>
+
+</section>
+
+<section id="kontak">
+
+<div class="section-title">
+<h2>Kontak</h2>
+<p>Sekretariat BOBOKO Korwil Hiji Sumedang</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Ketua</h3>
+<p>Asep Yudi</p>
+<p>0852-8323-1190</p>
+</div>
+
+<div class="card">
+<h3>Sekretaris Jenderal</h3>
+<p>Dede Taharudin, S.E.</p>
+<p>0851-3500-9544</p>
+</div>
+
+<div class="card">
+<h3>Bidang IT</h3>
+<p>Rudy Buana Santosa, S.T.</p>
+</div>
+
+<div class="card">
+<h3>Email Sekretariat</h3>
+<p>bobokokorwilhiji@gmail.com</p>
+</div>
+
+</div>
+</section>
+
+<section id="admin" class="admin-section">
+
+<div class="section-title">
+<h2>Admin</h2>
+<p>Panel administrasi website BOBOKO</p>
+</div>
+
+<div id="adminLogin" class="admin-login card">
+
+<div class="form-group">
+<label>Email Admin</label>
+
+<input
+id="adminEmail"
+type="email"
+placeholder="Email admin"
+autocomplete="username">
+
+</div>
+
+<div class="form-group">
+<label>Password</label>
+
+<input
+id="adminPassword"
+type="password"
+placeholder="Password"
+autocomplete="current-password">
+
+</div>
+
+<button
+class="btn"
+type="button"
+onclick="loginAdmin()">
+🔐 LOGIN ADMIN
+</button>
+
+<p
+id="loginMessage"
+style="margin-top:10px;color:#ff7777;">
+</p>
+
+</div>
+
+<div id="adminPanel" class="admin-panel">
+
+<div class="card">
+
+<div style="
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+flex-wrap:wrap;
+">
+
+<h2 style="color:#d4af37;">
+⚙️ ADMIN PANEL
+</h2>
+
+<button
+class="btn btn-danger"
+type="button"
+onclick="logoutAdmin()">
+Logout
+</button>
+
+</div>
+
+<br>
+
+<div class="admin-tabs">
+
+<button
+type="button"
+class="active"
+onclick="openAdminTab('tabPengurus',this)">
+👥 Pengurus
+</button>
+
+<button
+type="button"
+onclick="openAdminTab('tabBerita',this)">
+📰 Berita
+</button>
+
+<button
+type="button"
+onclick="openAdminTab('tabKegiatan',this)">
+📅 Kegiatan
+</button>
+
+<button
+type="button"
+onclick="openAdminTab('tabGaleri',this)">
+📸 Galeri / Upload
+</button>
+
+<button
+type="button"
+onclick="openAdminTab('tabDokumen',this)">
+📄 Dokumen
+</button>
+
+<button
+type="button"
+onclick="openAdminTab('tabBukuTamu',this)">
+📖 Buku Tamu
+</button>
+
+</div>
+
+<div id="tabPengurus" class="admin-content active">
+
+<h3 style="color:#d4af37;">
+👥 Kelola Pengurus
+</h3>
+
+<p style="color:#bbb;">
+Data pengurus tersimpan di Supabase.
+</p>
+
+<br>
+
+<input type="hidden" id="editPengurusId">
+
+<div class="form-group">
+<label>Nama Pengurus</label>
+
+<input
+id="pengurusNama"
+type="text"
+placeholder="Contoh: Rudy Buana Santosa, S.T.">
+
+</div>
+
+<div class="form-group">
+<label>Jabatan / Divisi</label>
+
+<input
+id="pengurusJabatan"
+type="text"
+placeholder="Contoh: Bidang IT / Humas / Koordinator">
+
+</div>
+
+<div class="form-group">
+<label>Keterangan</label>
+
+<textarea
+id="pengurusKeterangan"
+placeholder="Keterangan tambahan jika diperlukan"></textarea>
+
+</div>
+
+<div id="pengurusStatus" class="status-box"></div>
+
+<button
+class="btn btn-green"
+type="button"
+onclick="savePengurus()">
+💾 SIMPAN / UPDATE
+</button>
+
+<button
+class="btn btn-dark"
+type="button"
+onclick="resetPengurusForm()">
+🔄 RESET
+</button>
+
+<br><br>
+
+<h3 style="color:#d4af37;">
+Daftar Pengurus
+</h3>
+
+<div
+id="adminPengurusList"
+style="margin-top:15px;">
+</div>
+
+</div>
+
+<div id="tabBerita" class="admin-content">
+
+<h3 style="color:#d4af37;">
+📰 Tambah Berita
+</h3>
+
+<br>
+
+<input type="hidden" id="editNewsId">
+
+<div class="form-group">
+<label>Judul Berita</label>
+
+<input
+id="newsTitle"
+type="text"
+placeholder="Judul berita">
+
+</div>
+
+<div class="form-group">
+<label>Isi Berita</label>
+
+<textarea
+id="newsContent"
+placeholder="Isi berita"></textarea>
+
+</div>
+
+<div class="form-group">
+<label>Link</label>
+
+<input
+id="newsLink"
+type="url"
+placeholder="https://...">
+
+</div>
+
+<div class="form-group">
+<label>Status</label>
+
+<select id="newsStatus">
+
+<option value="TAYANG">
+TAYANG
+</option>
+
+<option value="DRAFT">
+DRAFT
+</option>
+
+</select>
+
+</div>
+
+<button
+class="btn btn-green"
+type="button"
+onclick="saveNews()">
+💾 SIMPAN BERITA
+</button>
+
+<button
+class="btn btn-dark"
+type="button"
+onclick="resetNewsForm()">
+🔄 Reset
+</button>
+
+<br><br>
+
+<div id="adminNewsList"></div>
+
+</div>
+
+<div id="tabKegiatan" class="admin-content">
+
+<h3 style="color:#d4af37;">
+📅 Tambah Kegiatan
+</h3>
+
+<br>
+
+<input type="hidden" id="editEventId">
+
+<div class="form-group">
+<label>Nama Kegiatan</label>
+
+<input
+id="eventTitle"
+type="text"
+placeholder="Nama kegiatan">
+
+</div>
+
+<div class="form-group">
+<label>Tanggal</label>
+
+<input
+id="eventDate"
+type="date">
+
+</div>
+
+<div class="form-group">
+<label>Waktu</label>
+
+<input
+id="eventTime"
+type="time">
+
+</div>
+
+<div class="form-group">
+<label>Tempat</label>
+
+<input
+id="eventPlace"
+type="text"
+placeholder="Tempat kegiatan">
+
+</div>
+
+<div class="form-group">
+<label>Keterangan</label>
+
+<textarea
+id="eventDescription"
+placeholder="Keterangan kegiatan"></textarea>
+
+</div>
+
+<div class="form-group">
+<label>Status</label>
+
+<select id="eventStatus">
+
+<option value="AKTIF">
+AKTIF
+</option>
+
+<option value="DRAFT">
+DRAFT
+</option>
+
+</select>
+
+</div>
+
+<button
+class="btn btn-green"
+type="button"
+onclick="saveEvent()">
+💾 SIMPAN KEGIATAN
+</button>
+
+<button
+class="btn btn-dark"
+type="button"
+onclick="resetEventForm()">
+🔄 Reset
+</button>
+
+<br><br>
+
+<div id="adminEventList"></div>
+
+</div>
+
+<div id="tabGaleri" class="admin-content">
+
+<h3 style="color:#d4af37;">
+📸 Galeri / Upload
+</h3>
+
+<p style="color:#bbb;">
+Upload foto atau video kegiatan ke Supabase Storage.
+</p>
+
+<br>
+
+<div class="form-group">
+<label>Judul Media</label>
+
+<input
+id="mediaTitle"
+type="text"
+placeholder="Contoh: Kegiatan BOBOKO">
+
+</div>
+
+<div class="form-group">
+<label>Tanggal</label>
+
+<input
+id="mediaDate"
+type="date">
+
+</div>
+
+<div class="form-group">
+<label>Kategori</label>
+
+<select id="mediaCategory">
+
+<option value="Kegiatan">
+Kegiatan
+</option>
+
+<option value="Dokumentasi">
+Dokumentasi
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+<label>Caption</label>
+
+<textarea
+id="mediaCaption"
+placeholder="Caption foto/video"></textarea>
+
+</div>
+
+<div class="form-group">
+<label>Tipe Media</label>
+
+<select id="mediaType">
+
+<option value="image">
+Foto
+</option>
+
+<option value="video">
+Video
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+<label>Pilih File</label>
+
+<input
+id="mediaFile"
+type="file"
+accept="image/*,video/*">
+
+</div>
+
+<button
+class="btn btn-green"
+type="button"
+onclick="addMedia()">
+⬆️ UPLOAD MEDIA
+</button>
+
+<button
+class="btn btn-dark"
+type="button"
+onclick="resetMediaForm()">
+🔄 RESET
+</button>
+
+<br><br>
+
+<p style="color:#ffcc66;font-size:13px;">
+☁️ File akan disimpan di Supabase Storage bucket
+<strong>galeri</strong>.
+</p>
+
+<br>
+
+<h3 style="color:#d4af37;">
+Media Upload Admin
+</h3>
+
+<div
+id="adminGalleryList"
+style="margin-top:15px;">
+</div>
+
+</div>
+
+<div id="tabDokumen" class="admin-content">
+
+<h3 style="color:#d4af37;">
+📄 Upload Dokumen
+</h3>
+
+<p style="color:#bbb;">
+Upload dokumen organisasi ke Supabase Storage.
+</p>
+
+<br>
+
+<div class="doc-upload-box">
+
+<input type="hidden" id="editDocumentId">
+
+<div class="form-group">
+<label>Nama Dokumen</label>
+
+<input
+id="documentTitle"
+type="text"
+placeholder="Contoh: Surat Keputusan Pengurus">
+
+</div>
+
+<div class="form-group">
+<label>Kategori</label>
+
+<select id="documentCategory">
+
+<option value="Organisasi">
+Organisasi
+</option>
+
+<option value="Administrasi">
+Administrasi
+</option>
+
+<option value="Surat">
+Surat
+</option>
+
+<option value="Lainnya">
+Lainnya
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+<label>Keterangan</label>
+
+<textarea
+id="documentDescription"
+placeholder="Keterangan dokumen"></textarea>
+
+</div>
+
+<div class="form-group">
+<label>Pilih Dokumen</label>
+
+<input
+id="documentFile"
+type="file"
+accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt">
+
+</div>
+
+<button
+class="btn btn-green"
+type="button"
+onclick="addDocument()">
+📤 UPLOAD DOKUMEN
+</button>
+
+<button
+class="btn btn-dark"
+type="button"
+onclick="resetDocumentForm()">
+🔄 RESET
+</button>
+
+</div>
+
+<p style="color:#ffcc66;font-size:13px;">
+☁️ File akan disimpan di Supabase Storage bucket
+<strong>dokumen</strong>.
+</p>
+
+<br>
+
+<h3 style="color:#d4af37;">
+📚 Dokumen Upload Admin
+</h3>
+
+<div
+id="adminDocumentList"
+style="margin-top:15px;">
+</div>
+
+</div>
+
+<div id="tabBukuTamu" class="admin-content">
+
+<h3 style="color:#d4af37;">
+📖 Kelola Buku Tamu
+</h3>
+
+<p style="color:#bbb;">
+Kelola saran, kritik, dan testimoni yang dikirim pengunjung.
+</p>
+
+<div class="guestbook-admin-filter">
+
+<button
+type="button"
+class="active"
+onclick="setGuestbookFilter('Semua',this)">
+Semua
+</button>
+
+<button
+type="button"
+onclick="setGuestbookFilter('pending',this)">
+⏳ Pending
+</button>
+
+<button
+type="button"
+onclick="setGuestbookFilter('approved',this)">
+✅ Approved
+</button>
+
+<button
+type="button"
+onclick="setGuestbookFilter('rejected',this)">
+❌ Rejected
+</button>
+
+</div>
+
+<div id="adminGuestbookList">
+
+<div class="loading">
+Memuat Buku Tamu...
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<footer>
+
+<p>
+© 2026 <strong>BOBOKO Korwil Hiji Sumedang</strong>
+</p>
+
+<p>
+Sekretariat Korwil Hiji
+</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+
+const SUPABASE_URL =
+"https://tcdgihthglylwavzibml.supabase.co";
+
+const SUPABASE_PUBLISHABLE_KEY =
+"sb_publishable_a8S1R_YC9ifliEUQSLTl0g__-NtLYGQ";
+
+const ADMIN_USER_ID =
+"6a2ec399-2c2f-423f-ab3c-7078d3694c07";
+
+const supabaseClient =
+window.supabase.createClient(
+SUPABASE_URL,
+SUPABASE_PUBLISHABLE_KEY
+);
+
+function updateClock(){
+
+const now=new Date();
+
+document.getElementById("digitalClock").textContent=
+now.toLocaleTimeString("id-ID",{
+hour:"2-digit",
+minute:"2-digit",
+second:"2-digit"
+});
+
+document.getElementById("dateNow").textContent=
+now.toLocaleDateString("id-ID",{
+weekday:"long",
+day:"numeric",
+month:"long",
+year:"numeric"
+});
+
+}
+
+setInterval(updateClock,1000);
+updateClock();
+
+const FORMBOOST_REGISTRASI=
+"https://formboost.app/f/r4youj8d";
+
+const JALAN_SEHAT_V2=
+"https://jalan-sehat-korwil-hiji-sumedang.netlify.app/";
+
+const defaultPengurus=[
+
+{
+id:"default-1",
+nama_lengkap:"Asep Yudi",
+jabatan:"Ketua",
+keterangan:"Ketua BOBOKO Korwil 1 Sumedang"
+},
+
+{
+id:"default-2",
+nama_lengkap:"Belum ditentukan",
+jabatan:"Wakil Ketua",
+keterangan:""
+},
+
+{
+id:"default-3",
+nama_lengkap:"Dede Taharudin, S.E.",
+jabatan:"Sekretaris Jenderal",
+keterangan:""
+},
+
+{
+id:"default-4",
+nama_lengkap:"Belum ditentukan",
+jabatan:"Bendahara",
+keterangan:""
+},
+
+{
+id:"default-5",
+nama_lengkap:"Belum ditentukan",
+jabatan:"Bidang Humas",
+keterangan:""
+},
+
+{
+id:"default-6",
+nama_lengkap:"Rudy Buana Santosa, S.T.",
+jabatan:"Bidang IT",
+keterangan:""
+},
+
+{
+id:"default-7",
+nama_lengkap:"Belum ditentukan",
+jabatan:"Bidang Organisasi",
+keterangan:""
+}
+
+];
+
+const defaultNews=[
+
+{
+id:"default-news-1",
+judul:"Jalan Sehat BOBOKO Korwil 1",
+isi:"Informasi kegiatan Jalan Sehat BOBOKO Korwil 1 Sumedang.",
+link:JALAN_SEHAT_V2,
+status:"TAYANG",
+tanggal:"2026-09-01"
+},
+
+{
+id:"default-news-2",
+judul:"Persib Bandung",
+isi:"Informasi Persib dan kompetisi sepak bola Indonesia.",
+link:"https://www.ligaindonesiabaru.com/clubs/single/BRI_SUPER_LEAGUE_2026-27/persib_bandung",
+status:"TAYANG",
+tanggal:"2026-09-01"
+}
+
+];
+
+const defaultGallery=[
+
+{
+id:"default-photo-1",
+judul:"Kegiatan BOBOKO",
+tanggal:"2026-09",
+kategori:"Kegiatan",
+keterangan:"Dokumentasi kegiatan BOBOKO",
+jenis_media:"FOTO",
+file_url:"logo/photo1.png"
+},
+
+{
+id:"default-photo-2",
+judul:"Kegiatan BOBOKO",
+tanggal:"2026-10",
+kategori:"Kegiatan",
+keterangan:"Dokumentasi kegiatan BOBOKO",
+jenis_media:"FOTO",
+file_url:"logo/photo2.png"
+},
+
+{
+id:"default-photo-3",
+judul:"Kegiatan BOBOKO",
+tanggal:"2026-11",
+kategori:"Dokumentasi",
+keterangan:"Dokumentasi kegiatan BOBOKO",
+jenis_media:"FOTO",
+file_url:"logo/photo3.png"
+},
+
+{
+id:"default-photo-4",
+judul:"Kegiatan BOBOKO",
+tanggal:"2026-12",
+kategori:"Dokumentasi",
+keterangan:"Dokumentasi kegiatan BOBOKO",
+jenis_media:"FOTO",
+file_url:"logo/photo4.png"
+}
+
+];
+
+const defaultDocuments=[
+
+{
+id:"default-doc-1",
+nama_dokumen:"AD/ART",
+file_url:"documents/ad-art.pdf"
+},
+
+{
+id:"default-doc-2",
+nama_dokumen:"SK Kepengurusan",
+file_url:"documents/sk-kepengurusan.pdf"
+},
+
+{
+id:"default-doc-3",
+nama_dokumen:"Tata Tertib",
+file_url:"documents/tata-tertib.pdf"
+},
+
+{
+id:"default-doc-4",
+nama_dokumen:"Formulir",
+file_url:"documents/formulir.pdf"
+},
+
+{
+id:"default-doc-5",
+nama_dokumen:"Surat Edaran",
+file_url:"documents/surat-edaran.pdf"
+}
+
+];
+
+function escapeHTML(value){
+
+return String(value??"")
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+function safeURL(url){
+
+const value=
+String(url??"").trim();
+
+if(!value){
+return"#";
+}
+
+if(
+!value.startsWith("http://") &&
+!value.startsWith("https://") &&
+!value.startsWith("data:") &&
+!value.startsWith("blob:") &&
+!value.startsWith("//")
+){
+
+return value;
+
+}
+
+try{
+
+const parsed=
+new URL(
+value,
+window.location.href
+);
+
+if(
+parsed.protocol==="http:" ||
+parsed.protocol==="https:" ||
+parsed.protocol==="data:" ||
+parsed.protocol==="blob:"
+){
+
+return parsed.href;
+
+}
+
+}catch(e){
+
+console.warn(
+"URL tidak valid:",
+value
+);
+
+}
+
+return"#";
+
+}
+
+function formatDate(value){
+
+if(!value)return"";
+
+try{
+
+return new Date(value+"T00:00:00")
+.toLocaleDateString("id-ID",{
+day:"numeric",
+month:"long",
+year:"numeric"
+});
+
+}catch(e){
+
+return value;
+
+}
+
+}
+
+function showMessage(
+elementId,
+message,
+type="success"
+){
+
+const box=
+document.getElementById(elementId);
+
+if(!box)return;
+
+box.className=
+"status-box "+
+(type==="success"
+?"status-success"
+:"status-error");
+
+box.textContent=message;
+
+}
+
+async function loadPengurus(){
+
+const container=
+document.getElementById("publicPengurus");
+
+container.innerHTML=
+`<div class="loading">Memuat data pengurus...</div>`;
+
+const {data,error}=
+await supabaseClient
+.from("pengurus")
+.select(
+"id,nama_lengkap,jabatan,keterangan,foto_url,urutan,status"
+)
+.eq("status","AKTIF")
+.order("urutan",{ascending:true})
+.order("created_at",{ascending:true});
+
+if(error){
+
+console.error(
+"loadPengurus:",
+error
+);
+
+renderPublicPengurus(
+defaultPengurus
+);
+
+return defaultPengurus;
+
+}
+
+if(!data||data.length===0){
+
+renderPublicPengurus(
+defaultPengurus
+);
+
+return defaultPengurus;
+
+}
+
+renderPublicPengurus(data);
+
+return data;
+
+}
+
+function renderPublicPengurus(data){
+
+const container=
+document.getElementById("publicPengurus");
+
+container.innerHTML="";
+
+data.forEach(item=>{
+
+container.innerHTML+=`
+
+<div class="card pengurus-card">
+
+<div class="jabatan">
+${escapeHTML(item.jabatan)}
+</div>
+
+<div class="nama">
+${escapeHTML(item.nama_lengkap)}
+</div>
+
+${
+item.keterangan
+?
+`<p style="color:#aaa;margin-top:8px;">
+${escapeHTML(item.keterangan)}
+</p>`
+:""
+}
+
+</div>
+
+`;
+
+});
+
+document.getElementById("statPengurus")
+.textContent=data.length;
+
+}
+
+async function loadAdminPengurus(){
+
+const box=
+document.getElementById("adminPengurusList");
+
+box.innerHTML=
+`<div class="loading">Memuat...</div>`;
+
+const {data,error}=
+await supabaseClient
+.from("pengurus")
+.select("*")
+.order("urutan",{ascending:true})
+.order("created_at",{ascending:true});
+
+if(error){
+
+box.innerHTML=
+`<p style="color:#ff7777;">
+❌ ${escapeHTML(error.message)}
+</p>`;
+
+return;
+
+}
+
+if(!data.length){
+
+box.innerHTML=
+`<p style="color:#aaa;">
+Belum ada data pengurus di Supabase.
+</p>`;
+
+return;
+
+}
+
+box.innerHTML="";
+
+data.forEach(item=>{
+
+box.innerHTML+=`
+
+<div class="admin-record">
+
+<strong>
+${escapeHTML(item.nama_lengkap)}
+</strong>
+
+<br>
+
+<span>
+${escapeHTML(item.jabatan)}
+</span>
+
+${
+item.keterangan
+?
+`<p style="color:#aaa;margin-top:5px;">
+${escapeHTML(item.keterangan)}
+</p>`
+:""
+}
+
+<div class="admin-actions">
+
+<button
+class="btn btn-blue"
+type="button"
+onclick="editPengurus('${item.id}')">
+✏️ Update
+</button>
+
+<button
+class="btn btn-danger"
+type="button"
+onclick="deletePengurus('${item.id}')">
+🗑️ Hapus
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+async function savePengurus(){
+
+const id=
+document.getElementById("editPengurusId").value;
+
+const nama=
+document.getElementById("pengurusNama")
+.value.trim();
+
+const jabatan=
+document.getElementById("pengurusJabatan")
+.value.trim();
+
+const keterangan=
+document.getElementById("pengurusKeterangan")
+.value.trim();
+
+if(!nama||!jabatan){
+
+showMessage(
+"pengurusStatus",
+"⚠️ Nama dan jabatan/divisi wajib diisi.",
+"error"
+);
+
+return;
+
+}
+
+showMessage(
+"pengurusStatus",
+"⏳ Menyimpan ke Supabase...",
+"success"
+);
+
+const payload={
+
+nama_lengkap:nama,
+jabatan:jabatan,
+keterangan:keterangan,
+status:"AKTIF"
+
+};
+
+let result;
+
+if(id){
+
+result=
+await supabaseClient
+.from("pengurus")
+.update(payload)
+.eq("id",id)
+.select()
+.single();
+
+}else{
+
+result=
+await supabaseClient
+.from("pengurus")
+.insert(payload)
+.select()
+.single();
+
+}
+
+if(result.error){
+
+console.error(result.error);
+
+showMessage(
+"pengurusStatus",
+"❌ Gagal: "+
+result.error.message,
+"error"
+);
+
+return;
+
+}
+
+await loadPengurus();
+await loadAdminPengurus();
+
+resetPengurusForm();
+
+showMessage(
+"pengurusStatus",
+id
+?"✅ Pengurus berhasil diupdate di Supabase."
+:"✅ Pengurus berhasil ditambahkan ke Supabase.",
+"success"
+);
+
+}
+
+async function editPengurus(id){
+
+const {data,error}=
+await supabaseClient
+.from("pengurus")
+.select("*")
+.eq("id",id)
+.single();
+
+if(error||!data){
+
+alert(
+"❌ Data pengurus tidak ditemukan."
+);
+
+return;
+
+}
+
+document.getElementById(
+"editPengurusId"
+).value=data.id;
+
+document.getElementById(
+"pengurusNama"
+).value=
+data.nama_lengkap||"";
+
+document.getElementById(
+"pengurusJabatan"
+).value=
+data.jabatan||"";
+
+document.getElementById(
+"pengurusKeterangan"
+).value=
+data.keterangan||"";
+
+document.getElementById(
+"pengurusNama"
+).focus();
+
+}
+
+async function deletePengurus(id){
+
+if(!confirm(
+"Yakin ingin menghapus pengurus ini?"
+))return;
+
+const {error}=
+await supabaseClient
+.from("pengurus")
+.delete()
+.eq("id",id);
+
+if(error){
+
+alert(
+"❌ Gagal menghapus:\n\n"+
+error.message
+);
+
+return;
+
+}
+
+await loadPengurus();
+await loadAdminPengurus();
+
+alert(
+"🗑️ Pengurus berhasil dihapus dari Supabase."
+);
+
+}
+
+function resetPengurusForm(){
+
+document.getElementById(
+"editPengurusId"
+).value="";
+
+document.getElementById(
+"pengurusNama"
+).value="";
+
+document.getElementById(
+"pengurusJabatan"
+).value="";
+
+document.getElementById(
+"pengurusKeterangan"
+).value="";
+
+}
+
+async function loadNews(){
+
+const publicBox=
+document.getElementById("publicNews");
+
+publicBox.innerHTML=
+`<div class="loading">Memuat berita...</div>`;
+
+const {data,error}=
+await supabaseClient
+.from("berita")
+.select("*")
+.eq("status","TAYANG")
+.order("tanggal",{ascending:false})
+.order("urutan",{ascending:true});
+
+if(error){
+
+console.error(
+"loadNews:",
+error
+);
+
+renderPublicNews(
+defaultNews
+);
+
+return defaultNews;
+
+}
+
+if(!data||data.length===0){
+
+renderPublicNews(
+defaultNews
+);
+
+return defaultNews;
+
+}
+
+renderPublicNews(data);
+
+return data;
+
+}
+
+function renderPublicNews(data){
+
+const box=
+document.getElementById("publicNews");
+
+box.innerHTML="";
+
+data.forEach(item=>{
+
+box.innerHTML+=`
+
+<div class="card news-card">
+
+<h3>
+${escapeHTML(item.judul)}
+</h3>
+
+<p>
+${escapeHTML(item.isi)}
+</p>
+
+${
+item.tanggal
+?
+`<p style="color:#aaa;margin-top:8px;">
+📅 ${formatDate(item.tanggal)}
+</p>`
+:""
+}
+
+${
+item.link
+?
+`
+<br>
+<a
+class="btn"
+href="${safeURL(item.link)}"
+target="_blank"
+rel="noopener">
+Buka Berita
+</a>
+`
+:""
+}
+
+</div>
+
+`;
+
+});
+
+}
+
+async function loadAdminNews(){
+
+const box=
+document.getElementById("adminNewsList");
+
+const {data,error}=
+await supabaseClient
+.from("berita")
+.select("*")
+.order("created_at",{ascending:false});
+
+if(error){
+
+box.innerHTML=
+`<p style="color:#ff7777;">
+❌ ${escapeHTML(error.message)}
+</p>`;
+
+return;
+
+}
+
+box.innerHTML="";
+
+if(!data.length){
+
+box.innerHTML=
+`<p style="color:#aaa;">
+Belum ada berita di Supabase.
+</p>`;
+
+return;
+
+}
+
+data.forEach(item=>{
+
+box.innerHTML+=`
+
+<div class="admin-record">
+
+<strong>
+${escapeHTML(item.judul)}
+</strong>
+
+<p>
+${escapeHTML(item.isi)}
+</p>
+
+<p style="color:#aaa;">
+Status: ${escapeHTML(item.status)}
+</p>
+
+<div class="admin-actions">
+
+<button
+class="btn btn-blue"
+type="button"
+onclick="editNews('${item.id}')">
+✏️ Update
+</button>
+
+<button
+class="btn btn-danger"
+type="button"
+onclick="deleteNews('${item.id}')">
+🗑️ Hapus
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+async function saveNews(){
+
+const id=
+document.getElementById("editNewsId").value;
+
+const judul=
+document.getElementById("newsTitle")
+.value.trim();
+
+const isi=
+document.getElementById("newsContent")
+.value.trim();
+
+const link=
+document.getElementById("newsLink")
+.value.trim();
+
+const status=
+document.getElementById("newsStatus")
+.value;
+
+if(!judul||!isi){
+
+alert(
+"⚠️ Judul dan isi berita wajib diisi."
+);
+
+return;
+
+}
+
+const payload={
+
+judul:judul,
+isi:isi,
+link:link||null,
+status:status,
+tanggal:new Date()
+.toISOString()
+.slice(0,10)
+
+};
+
+let result;
+
+if(id){
+
+result=
+await supabaseClient
+.from("berita")
+.update(payload)
+.eq("id",id);
+
+}else{
+
+result=
+await supabaseClient
+.from("berita")
+.insert(payload);
+
+}
+
+if(result.error){
+
+alert(
+"❌ Gagal menyimpan berita:\n\n"+
+result.error.message
+);
+
+return;
+
+}
+
+await loadNews();
+await loadAdminNews();
+
+resetNewsForm();
+
+alert(
+id
+?"✅ Berita berhasil diupdate."
+:"✅ Berita berhasil ditambahkan."
+);
+
+}
+
+async function editNews(id){
+
+const {data,error}=
+await supabaseClient
+.from("berita")
+.select("*")
+.eq("id",id)
+.single();
+
+if(error||!data){
+
+alert(
+"❌ Berita tidak ditemukan."
+);
+
+return;
+
+}
+
+document.getElementById(
+"editNewsId"
+).value=data.id;
+
+document.getElementById(
+"newsTitle"
+).value=data.judul||"";
+
+document.getElementById(
+"newsContent"
+).value=data.isi||"";
+
+document.getElementById(
+"newsLink"
+).value=data.link||"";
+
+document.getElementById(
+"newsStatus"
+).value=data.status||"TAYANG";
+
+}
+
+async function deleteNews(id){
+
+if(!confirm(
+"Yakin ingin menghapus berita ini?"
+))return;
+
+const {error}=
+await supabaseClient
+.from("berita")
+.delete()
+.eq("id",id);
+
+if(error){
+
+alert(
+"❌ Gagal menghapus berita:\n\n"+
+error.message
+);
+
+return;
+
+}
+
+await loadNews();
+await loadAdminNews();
+
+}
+
+function resetNewsForm(){
+
+document.getElementById(
+"editNewsId"
+).value="";
+
+document.getElementById(
+"newsTitle"
+).value="";
+
+document.getElementById(
+"newsContent"
+).value="";
+
+document.getElementById(
+"newsLink"
+).value="";
+
+document.getElementById(
+"newsStatus"
+).value="TAYANG";
+
+}
+
+async function loadEvents(){
+
+const {data,error}=
+await supabaseClient
+.from("kegiatan")
+.select("*")
+.eq("status","AKTIF")
+.order("tanggal",{ascending:true})
+.order("urutan",{ascending:true});
+
+if(error){
+
+console.error(
+"loadEvents:",
+error
+);
+
+return[];
+
+}
+
+return data||[];
+
+}
+
+async function loadAdminEvents(){
+
+const box=
+document.getElementById("adminEventList");
+
+const {data,error}=
+await supabaseClient
+.from("kegiatan")
+.select("*")
+.order("tanggal",{ascending:true});
+
+if(error){
+
+box.innerHTML=
+`<p style="color:#ff7777;">
+❌ ${escapeHTML(error.message)}
+</p>`;
+
+return;
+
+}
+
+box.innerHTML="";
+
+if(!data.length){
+
+box.innerHTML=
+`<p style="color:#aaa;">
+Belum ada kegiatan.
+</p>`;
+
+return;
+
+}
+
+data.forEach(item=>{
+
+box.innerHTML+=`
+
+<div class="admin-record">
+
+<strong>
+${escapeHTML(item.judul)}
+</strong>
+
+<br>
+
+<span>
+📅 ${escapeHTML(item.tanggal||"")}
+</span>
+
+${
+item.waktu
+?
+`<span> • ⏰ ${escapeHTML(item.waktu)}</span>`
+:""
+}
+
+${
+item.tempat
+?
+`<p style="color:#bbb;">
+📍 ${escapeHTML(item.tempat)}
+</p>`
+:""
+}
+
+<p style="color:#aaa;">
+${escapeHTML(item.deskripsi||"")}
+</p>
+
+<p style="color:#aaa;">
+Status: ${escapeHTML(item.status)}
+</p>
+
+<div class="admin-actions">
+
+<button
+class="btn btn-blue"
+type="button"
+onclick="editEvent('${item.id}')">
+✏️ Update
+</button>
+
+<button
+class="btn btn-danger"
+type="button"
+onclick="deleteEvent('${item.id}')">
+🗑️ Hapus
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+async function saveEvent(){
+
+const id=
+document.getElementById("editEventId")
+.value;
+
+const judul=
+document.getElementById("eventTitle")
+.value.trim();
+
+const tanggal=
+document.getElementById("eventDate")
+.value;
+
+const waktu=
+document.getElementById("eventTime")
+.value;
+
+const tempat=
+document.getElementById("eventPlace")
+.value.trim();
+
+const deskripsi=
+document.getElementById("eventDescription")
+.value.trim();
+
+const status=
+document.getElementById("eventStatus")
+.value;
+
+if(!judul||!tanggal){
+
+alert(
+"⚠️ Nama kegiatan dan tanggal wajib diisi."
+);
+
+return;
+
+}
+
+const payload={
+
+judul:judul,
+deskripsi:deskripsi,
+tanggal:tanggal,
+waktu:waktu||null,
+tempat:tempat||null,
+status:status
+
+};
+
+let result;
+
+if(id){
+
+result=
+await supabaseClient
+.from("kegiatan")
+.update(payload)
+.eq("id",id);
+
+}else{
+
+result=
+await supabaseClient
+.from("kegiatan")
+.insert(payload);
+
+}
+
+if(result.error){
+
+alert(
+"❌ Gagal menyimpan kegiatan:\n\n"+
+result.error.message
+);
+
+return;
+
+}
+
+await loadAdminEvents();
+await updateDashboard();
+
+resetEventForm();
+
+alert(
+id
+?"✅ Kegiatan berhasil diupdate."
+:"✅ Kegiatan berhasil ditambahkan."
+);
+
+}
+
+async function editEvent(id){
+
+const {data,error}=
+await supabaseClient
+.from("kegiatan")
+.select("*")
+.eq("id",id)
+.single();
+
+if(error||!data){
+
+alert(
+"❌ Kegiatan tidak ditemukan."
+);
+
+return;
+
+}
+
+document.getElementById(
+"editEventId"
+).value=data.id;
+
+document.getElementById(
+"eventTitle"
+).value=data.judul||"";
+
+document.getElementById(
+"eventDate"
+).value=data.tanggal||"";
+
+document.getElementById(
+"eventTime"
+).value=data.waktu||"";
+
+document.getElementById(
+"eventPlace"
+).value=data.tempat||"";
+
+document.getElementById(
+"eventDescription"
+).value=data.deskripsi||"";
+
+document.getElementById(
+"eventStatus"
+).value=data.status||"AKTIF";
+
+}
+
+async function deleteEvent(id){
+
+if(!confirm(
+"Yakin ingin menghapus kegiatan ini?"
+))return;
+
+const {error}=
+await supabaseClient
+.from("kegiatan")
+.delete()
+.eq("id",id);
+
+if(error){
+
+alert(
+"❌ Gagal menghapus kegiatan:\n\n"+
+error.message
+);
+
+return;
+
+}
+
+await loadAdminEvents();
+await updateDashboard();
+
+}
+
+function resetEventForm(){
+
+document.getElementById(
+"editEventId"
+).value="";
+
+document.getElementById(
+"eventTitle"
+).value="";
+
+document.getElementById(
+"eventDate"
+).value="";
+
+document.getElementById(
+"eventTime"
+).value="";
+
+document.getElementById(
+"eventPlace"
+).value="";
+
+document.getElementById(
+"eventDescription"
+).value="";
+
+document.getElementById(
+"eventStatus"
+).value="AKTIF";
+
+}
+
+async function loadGallery(
+filter="Semua"
+){
+
+const box=
+document.getElementById("publicGallery");
+
+box.innerHTML=
+`<div class="loading">
+Memuat galeri...
+</div>`;
+
+const {data,error}=
+await supabaseClient
+.from("galeri")
+.select("*")
+.eq("status","TAYANG")
+.order("urutan",{ascending:true})
+.order("created_at",{ascending:false});
+
+let custom=[];
+
+if(!error&&data){
+
+custom=data;
+
+}
+
+const combined=
+defaultGallery.concat(custom);
+
+if(filter==="Semua"){
+
+renderGalleryData(
+combined
+);
+
+return;
+
+}
+
+const filtered=
+combined.filter(function(item){
+
+const category=
+String(
+item.kategori ||
+item.category ||
+""
+).trim();
+
+return category===filter;
+
+});
+
+renderGalleryData(
+filtered
+);
+
+}
+
+function renderGallery(filter="Semua"){
+
+loadGallery(filter);
+
+}
+
+function getGalleryType(item){
+
+const type=
+String(
+item.jenis_media||
+"FOTO"
+).toUpperCase();
+
+if(type==="VIDEO"){
+
+return"VIDEO";
+
+}
+
+return"FOTO";
+
+}
+
+function renderGalleryData(data){
+
+const box=
+document.getElementById("publicGallery");
+
+box.innerHTML="";
+
+if(!data||!data.length){
+
+box.innerHTML=
+`
+<div class="gallery-empty">
+Belum ada dokumentasi.
+</div>
+`;
+
+return;
+
+}
+
+data.forEach(function(item){
+
+const type=
+getGalleryType(item);
+
+const file=
+String(
+item.file_url||""
+).trim();
+
+let mediaHTML="";
+
+if(type==="VIDEO"){
+
+mediaHTML=`
+
+<video
+src="${safeURL(file)}"
+controls
+preload="metadata">
+Browser Anda tidak mendukung video.
+</video>
+
+`;
+
+}else{
+
+mediaHTML=`
+
+<img
+src="${safeURL(file)}"
+alt="${escapeHTML(
+item.judul||
+"Galeri BOBOKO"
+)}"
+loading="lazy"
+onerror="this.style.display='none';">
+
+`;
+
+}
+
+box.innerHTML+=`
+
+<div class="card gallery-item">
+
+${mediaHTML}
+
+<h4>
+${escapeHTML(
+item.judul||
+"Kegiatan BOBOKO"
+)}
+</h4>
+
+<p>
+${escapeHTML(
+item.keterangan||""
+)}
+</p>
+
+<p>
+${escapeHTML(
+item.tanggal||""
+)}
+</p>
+
+</div>
+
+`;
+
+});
+
+}
+
+async function loadAdminGallery(){
+
+const box=
+document.getElementById("adminGalleryList");
+
+const {data,error}=
+await supabaseClient
+.from("galeri")
+.select("*")
+.order("created_at",{ascending:false});
+
+if(error){
+
+box.innerHTML=
+`<p style="color:#ff7777;">
+❌ ${escapeHTML(error.message)}
+</p>`;
+
+return;
+
+}
+
+box.innerHTML="";
+
+if(!data.length){
+
+box.innerHTML=
+`<p style="color:#aaa;">
+Belum ada media upload admin.
+</p>`;
+
+return;
+
+}
+
+data.forEach(item=>{
+
+box.innerHTML+=`
+
+<div class="admin-record">
+
+<strong>
+${escapeHTML(item.judul)}
+</strong>
+
+<br>
+
+<span>
+${escapeHTML(
+item.jenis_media||"FOTO"
+)}
+—
+${escapeHTML(
+item.tanggal||""
+)}
+</span>
+
+<p style="color:#aaa;">
+${escapeHTML(
+item.keterangan||""
+)}
+</p>
+
+<div class="admin-actions">
+
+<a
+class="btn btn-blue"
+href="${safeURL(item.file_url)}"
+target="_blank"
+rel="noopener">
+👀 Buka
+</a>
+
+<button
+class="btn btn-danger"
+type="button"
+onclick="deleteMedia('${item.id}','${escapeHTML(item.file_path||"")}')">
+🗑️ Hapus
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+async function addMedia(){
+
+const title=
+document.getElementById("mediaTitle")
+.value.trim();
+
+const date=
+document.getElementById("mediaDate")
+.value;
+
+const category=
+document.getElementById("mediaCategory")
+.value;
+
+const caption=
+document.getElementById("mediaCaption")
+.value.trim();
+
+const type=
+document.getElementById("mediaType")
+.value;
+
+const fileInput=
+document.getElementById("mediaFile");
+
+if(
+!title ||
+!fileInput.files.length
+){
+
+alert(
+"⚠️ Judul dan file wajib dipilih."
+);
+
+return;
+
+}
+
+const file=
+fileInput.files[0];
+
+const maxSize=
+25*1024*1024;
+
+if(file.size>maxSize){
+
+alert(
+"⚠️ File terlalu besar.\n\n"+
+"Maksimal sementara 25 MB."
+);
+
+return;
+
+}
+
+const extension=
+file.name.includes(".")
+?
+file.name
+.split(".")
+.pop()
+.toLowerCase()
+:"bin";
+
+const filePath=
+"media-"+
+Date.now()+
+"-"+
+Math.random()
+.toString(36)
+.slice(2,8)+
+"."+
+extension;
+
+const {
+error:uploadError
+}=
+await supabaseClient.storage
+.from("galeri")
+.upload(
+filePath,
+file,
+{
+cacheControl:"3600",
+upsert:false,
+contentType:
+file.type||undefined
+}
+);
+
+if(uploadError){
+
+console.error(
+uploadError
+);
+
+alert(
+"❌ Upload Storage gagal:\n\n"+
+uploadError.message
+);
+
+return;
+
+}
+
+const {
+data:publicData
+}=
+supabaseClient.storage
+.from("galeri")
+.getPublicUrl(
+filePath
+);
+
+const fileUrl=
+publicData.publicUrl;
+
+let finalCaption=
+caption;
+
+if(
+!finalCaption &&
+(date||category)
+){
+
+finalCaption=
+[
+category,
+date
+]
+.filter(Boolean)
+.join(" — ");
+
+}
+
+const {
+error:dbError
+}=
+await supabaseClient
+.from("galeri")
+.insert({
+
+judul:title,
+
+jenis_media:
+type==="video"
+?"VIDEO"
+:"FOTO",
+
+file_url:fileUrl,
+
+file_path:filePath,
+
+keterangan:finalCaption,
+
+status:"TAYANG",
+
+urutan:0
+
+});
+
+if(dbError){
+
+console.error(
+dbError
+);
+
+await supabaseClient.storage
+.from("galeri")
+.remove([
+filePath
+]);
+
+alert(
+"❌ Data galeri gagal disimpan:\n\n"+
+dbError.message
+);
+
+return;
+
+}
+
+await loadGallery("Semua");
+await loadAdminGallery();
+await updateDashboard();
+
+resetMediaForm();
+
+alert(
+"✅ Media berhasil diupload ke Supabase."
+);
+
+}
+
+async function deleteMedia(
+id,
+filePath
+){
+
+if(!confirm(
+"Yakin ingin menghapus media ini?"
+))return;
+
+if(filePath){
+
+const {
+error:storageError
+}=
+await supabaseClient.storage
+.from("galeri")
+.remove([
+filePath
+]);
+
+if(storageError){
+
+console.warn(
+"Storage delete:",
+storageError
+);
+
+}
+
+}
+
+const {error}=
+await supabaseClient
+.from("galeri")
+.delete()
+.eq("id",id);
+
+if(error){
+
+alert(
+"❌ Gagal menghapus data:\n\n"+
+error.message
+);
+
+return;
+
+}
+
+await loadGallery("Semua");
+await loadAdminGallery();
+await updateDashboard();
+
+alert(
+"🗑️ Media berhasil dihapus."
+);
+
+}
+
+function resetMediaForm(){
+
+document.getElementById(
+"mediaTitle"
+).value="";
+
+document.getElementById(
+"mediaDate"
+).value="";
+
+document.getElementById(
+"mediaCategory"
+).value="Kegiatan";
+
+document.getElementById(
+"mediaCaption"
+).value="";
+
+document.getElementById(
+"mediaType"
+).value="image";
+
+document.getElementById(
+"mediaFile"
+).value="";
+
+}
+
+async function loadDocuments(){
+
+const box=
+document.getElementById(
+"publicDocuments"
+);
+
+box.innerHTML=
+`<div class="loading">
+Memuat dokumen...
+</div>`;
+
+const {data,error}=
+await supabaseClient
+.from("dokumen")
+.select("*")
+.eq("status","TAYANG")
+.order("urutan",{ascending:true})
+.order("created_at",{ascending:false});
+
+if(error){
+
+console.error(
+"loadDocuments:",
+error
+);
+
+renderDocumentsData(
+defaultDocuments
+);
+
+return;
+
+}
+
+renderDocumentsData(
+defaultDocuments.concat(
+data||[]
+)
+);
+
+}
+
+function renderDocumentsData(data){
+
+const box=
+document.getElementById(
+"publicDocuments"
+);
+
+box.innerHTML="";
+
+if(!data.length){
+
+box.innerHTML=
+`<p style="color:#aaa;">
+Belum ada dokumen.
+</p>`;
+
+return;
+
+}
+
+data.forEach(item=>{
+
+box.innerHTML+=`
+
+<div class="card document-card">
+
+<div style="font-size:45px;">
+📄
+</div>
+
+<h3>
+${escapeHTML(
+item.nama_dokumen||
+"Dokumen"
+)}
+</h3>
+
+${
+item.keterangan
+?
+`<p style="color:#bbb;">
+${escapeHTML(
+item.keterangan
+)}
+</p>`
+:""
+}
+
+<br>
+
+<a
+class="btn"
+href="${safeURL(item.file_url)}"
+target="_blank"
+rel="noopener">
+📖 Buka Dokumen
+</a>
+
+</div>
+
+`;
+
+});
+
+}
+
+async function loadAdminDocuments(){
+
+const box=
+document.getElementById(
+"adminDocumentList"
+);
+
+const {data,error}=
+await supabaseClient
+.from("dokumen")
+.select("*")
+.order("created_at",{ascending:false});
+
+if(error){
+
+box.innerHTML=
+`<p style="color:#ff7777;">
+❌ ${escapeHTML(error.message)}
+</p>`;
+
+return;
+
+}
+
+box.innerHTML="";
+
+if(!data.length){
+
+box.innerHTML=
+`<p style="color:#aaa;">
+Belum ada dokumen upload admin.
+</p>`;
+
+return;
+
+}
+
+data.forEach(item=>{
+
+box.innerHTML+=`
+
+<div class="admin-record">
+
+<strong>
+📄 ${escapeHTML(
+item.nama_dokumen
+)}
+</strong>
+
+${
+item.keterangan
+?
+`<p style="color:#aaa;">
+${escapeHTML(
+item.keterangan
+)}
+</p>`
+:""
+}
+
+<div class="admin-actions">
+
+<a
+class="btn btn-blue"
+href="${safeURL(item.file_url)}"
+target="_blank"
+rel="noopener">
+👀 Buka
+</a>
+
+<button
+class="btn btn-danger"
+type="button"
+onclick="deleteDocument('${item.id}','${escapeHTML(item.file_path||"")}')">
+🗑️ Hapus
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+async function addDocument(){
+
+const title=
+document.getElementById(
+"documentTitle"
+).value.trim();
+
+const category=
+document.getElementById(
+"documentCategory"
+).value;
+
+const description=
+document.getElementById(
+"documentDescription"
+).value.trim();
+
+const fileInput=
+document.getElementById(
+"documentFile"
+);
+
+if(
+!title ||
+!fileInput.files.length
+){
+
+alert(
+"⚠️ Nama dokumen dan file wajib dipilih."
+);
+
+return;
+
+}
+
+const file=
+fileInput.files[0];
+
+const maxSize=
+10*1024*1024;
+
+if(file.size>maxSize){
+
+alert(
+"⚠️ File terlalu besar.\n\n"+
+"Maksimal sementara 10 MB."
+);
+
+return;
+
+}
+
+const extension=
+file.name.includes(".")
+?
+file.name
+.split(".")
+.pop()
+.toLowerCase()
+:"bin";
+
+const filePath=
+"document-"+
+Date.now()+
+"-"+
+Math.random()
+.toString(36)
+.slice(2,8)+
+"."+
+extension;
+
+const {
+error:uploadError
+}=
+await supabaseClient.storage
+.from("dokumen")
+.upload(
+filePath,
+file,
+{
+cacheControl:"3600",
+upsert:false,
+contentType:
+file.type||undefined
+}
+);
+
+if(uploadError){
+
+console.error(
+uploadError
+);
+
+alert(
+"❌ Upload dokumen gagal:\n\n"+
+uploadError.message
+);
+
+return;
+
+}
+
+const {
+data:publicData
+}=
+supabaseClient.storage
+.from("dokumen")
+.getPublicUrl(
+filePath
+);
+
+const fileUrl=
+publicData.publicUrl;
+
+const {
+error:dbError
+}=
+await supabaseClient
+.from("dokumen")
+.insert({
+
+nama_dokumen:title,
+
+file_url:fileUrl,
+
+file_path:filePath,
+
+keterangan:
+category+
+(description
+?
+" — "+description
+:""),
+
+status:"TAYANG",
+
+urutan:0
+
+});
+
+if(dbError){
+
+console.error(
+dbError
+);
+
+await supabaseClient.storage
+.from("dokumen")
+.remove([
+filePath
+]);
+
+alert(
+"❌ Metadata dokumen gagal disimpan:\n\n"+
+dbError.message
+);
+
+return;
+
+}
+
+await loadDocuments();
+await loadAdminDocuments();
+await updateDashboard();
+
+resetDocumentForm();
+
+alert(
+"✅ Dokumen berhasil diupload ke Supabase."
+);
+
+}
+
+async function deleteDocument(
+id,
+filePath
+){
+
+if(!confirm(
+"Yakin ingin menghapus dokumen ini?"
+))return;
+
+if(filePath){
+
+const {
+error:storageError
+}=
+await supabaseClient.storage
+.from("dokumen")
+.remove([
+filePath
+]);
+
+if(storageError){
+
+console.warn(
+"Storage delete:",
+storageError
+);
+
+}
+
+}
+
+const {error}=
+await supabaseClient
+.from("dokumen")
+.delete()
+.eq("id",id);
+
+if(error){
+
+alert(
+"❌ Gagal menghapus dokumen:\n\n"+
+error.message
+);
+
+return;
+
+}
+
+await loadDocuments();
+await loadAdminDocuments();
+await updateDashboard();
+
+alert(
+"🗑️ Dokumen berhasil dihapus."
+);
+
+}
+
+function resetDocumentForm(){
+
+document.getElementById(
+"editDocumentId"
+).value="";
+
+document.getElementById(
+"documentTitle"
+).value="";
+
+document.getElementById(
+"documentCategory"
+).value="Organisasi";
+
+document.getElementById(
+"documentDescription"
+).value="";
+
+document.getElementById(
+"documentFile"
+).value="";
+
+}
+
+/* =====================================================
+BUKU TAMU - PUBLIC
+===================================================== */
+
+let guestbookAdminFilter="Semua";
+
+function getGuestbookRating(){
+
+const selected=
+document.querySelector(
+'input[name="guestRating"]:checked'
+);
+
+return selected
+?
+parseInt(selected.value,10)
+:5;
+
+}
+
+function renderStars(rating){
+
+const value=
+Math.max(
+1,
+Math.min(
+5,
+parseInt(rating,10)||5
+)
+);
+
+return"★".repeat(value)+
+"☆".repeat(5-value);
+
+}
+
+async function submitGuestbook(event){
+
+event.preventDefault();
+
+const nama=
+document.getElementById(
+"guestName"
+).value.trim();
+
+const wilayah=
+document.getElementById(
+"guestRegion"
+).value.trim();
+
+const tipe=
+document.getElementById(
+"guestType"
+).value;
+
+const pesan=
+document.getElementById(
+"guestMessage"
+).value.trim();
+
+const rating=
+getGuestbookRating();
+
+if(!nama||!pesan){
+
+showMessage(
+"guestbookStatus",
+"⚠️ Nama dan pesan wajib diisi.",
+"error"
+);
+
+return;
+
+}
+
+if(
+rating<1 ||
+rating>5
+){
+
+showMessage(
+"guestbookStatus",
+"⚠️ Rating tidak valid.",
+"error"
+);
+
+return;
+
+}
+
+showMessage(
+"guestbookStatus",
+"⏳ Mengirim Buku Tamu...",
+"success"
+);
+
+const {
+error
+}=
+await supabaseClient
+.from("buku_tamu")
+.insert({
+
+nama:nama,
+wilayah:wilayah||null,
+pesan:pesan,
+rating:rating,
+tipe:tipe,
+status:"pending"
+
+});
+
+if(error){
+
+console.error(
+"submitGuestbook:",
+error
+);
+
+showMessage(
+"guestbookStatus",
+"❌ Gagal mengirim: "+
+error.message,
+"error"
+);
+
+return;
+
+}
+
+document.getElementById(
+"guestName"
+).value="";
+
+document.getElementById(
+"guestRegion"
+).value="";
+
+document.getElementById(
+"guestType"
+).value="Testimoni";
+
+document.getElementById(
+"guestMessage"
+).value="";
+
+document.getElementById(
+"star5"
+).checked=true;
+
+showMessage(
+"guestbookStatus",
+"✅ Terima kasih. Pesan Anda berhasil dikirim dan menunggu persetujuan admin.",
+"success"
+);
+
+}
+
+/*
+=====================================================
+BUKU TAMU PUBLIC - VERSI DIPERKUAT
+=====================================================
+*/
+
+async function loadPublicGuestbook(){
+
+const box=
+document.getElementById(
+"publicGuestbook"
+);
+
+if(!box)return;
+
+box.innerHTML=
+`
+<div class="loading">
+⏳ Memuat Buku Tamu...
+</div>
+`;
+
+try{
+
+const {
+data,
+error
+}=
+await supabaseClient
+.from("buku_tamu")
+.select(
+"id,nama,wilayah,pesan,rating,tipe,status,created_at"
+)
+.eq("status","approved")
+.order("created_at",{ascending:false})
+.limit(100);
+
+if(error){
+
+console.error(
+"loadPublicGuestbook ERROR:",
+error
+);
+
+console.error(
+"Code:",
+error.code
+);
+
+console.error(
+"Details:",
+error.details
+);
+
+console.error(
+"Hint:",
+error.hint
+);
+
+box.innerHTML=
+`
+<div class="guestbook-empty">
+
+<strong style="color:#ffaaaa;">
+❌ Buku Tamu belum dapat dimuat.
+</strong>
+
+<br><br>
+
+<span style="font-size:12px;color:#888;">
+Silakan refresh halaman beberapa saat lagi.
+</span>
+
+</div>
+`;
+
+return;
+
+}
+
+if(!data || data.length===0){
+
+box.innerHTML=
+`
+<div class="guestbook-empty">
+
+<div style="font-size:35px;">
+📖
+</div>
+
+<strong style="color:#d4af37;">
+Belum ada pesan yang disetujui.
+</strong>
+
+<br>
+
+<span style="font-size:13px;color:#888;">
+Pesan akan tampil di sini setelah disetujui admin.
+</span>
+
+</div>
+`;
+
+return;
+
+}
+
+box.innerHTML="";
+
+data.forEach(function(item){
+
+const rating=
+Math.max(
+1,
+Math.min(
+5,
+parseInt(item.rating,10)||5
+)
+);
+
+const date=
+item.created_at
+?
+new Date(item.created_at)
+.toLocaleDateString(
+"id-ID",
+{
+day:"numeric",
+month:"long",
+year:"numeric"
+}
+)
+:"";
+
+const card=
+document.createElement("div");
+
+card.className=
+"card guestbook-card";
+
+card.innerHTML=
+`
+<div
+class="guestbook-stars"
+aria-label="Rating ${rating} dari 5">
+${renderStars(rating)}
+</div>
+
+<div class="guestbook-name">
+${escapeHTML(item.nama)}
+</div>
+
+${
+item.wilayah
+?
+`
+<div class="guestbook-region">
+📍 ${escapeHTML(item.wilayah)}
+</div>
+`
+:""
+}
+
+<span class="guestbook-type">
+${escapeHTML(item.tipe)}
+</span>
+
+<div class="guestbook-message">
+${escapeHTML(item.pesan)}
+</div>
+
+${
+date
+?
+`
+<div class="guestbook-date">
+📅 ${escapeHTML(date)}
+</div>
+`
+:""
+}
+
+`;
+
+box.appendChild(card);
+
+});
+
+}catch(error){
+
+console.error(
+"loadPublicGuestbook EXCEPTION:",
+error
+);
+
+box.innerHTML=
+`
+<div class="guestbook-empty">
+
+<strong style="color:#ffaaaa;">
+❌ Terjadi kesalahan saat memuat Buku Tamu.
+</strong>
+
+<br><br>
+
+<span style="font-size:12px;color:#888;">
+Silakan refresh halaman.
+</span>
+
+</div>
+`;
+
+}
+
+}
+
+function refreshPublicGuestbook(){
+
+loadPublicGuestbook();
+
+}
+
+/* =====================================================
+BUKU TAMU - ADMIN
+===================================================== */
+
+async function loadAdminGuestbook(){
+
+const box=
+document.getElementById(
+"adminGuestbookList"
+);
+
+box.innerHTML=
+`<div class="loading">
+Memuat Buku Tamu...
+</div>`;
+
+const {
+data,
+error
+}=
+await supabaseClient
+.from("buku_tamu")
+.select("*")
+.order("created_at",{ascending:false});
+
+if(error){
+
+console.error(
+"loadAdminGuestbook:",
+error
+);
+
+box.innerHTML=
+`
+<p style="color:#ff7777;">
+❌ ${escapeHTML(error.message)}
+</p>
+`;
+
+return;
+
+}
+
+let filtered=
+data||[];
+
+if(
+guestbookAdminFilter!=="Semua"
+){
+
+filtered=
+filtered.filter(function(item){
+
+return item.status===
+guestbookAdminFilter;
+
+});
+
+}
+
+if(!filtered.length){
+
+box.innerHTML=
+`
+<p style="color:#aaa;">
+Tidak ada data Buku Tamu untuk filter ini.
+</p>
+`;
+
+return;
+
+}
+
+box.innerHTML="";
+
+filtered.forEach(function(item){
+
+const date=
+item.created_at
+?
+new Date(item.created_at)
+.toLocaleString(
+"id-ID",
+{
+day:"numeric",
+month:"long",
+year:"numeric",
+hour:"2-digit",
+minute:"2-digit"
+}
+)
+:"";
+
+const statusClass=
+item.status==="approved"
+?"approved"
+:item.status==="rejected"
+?"rejected"
+:"pending";
+
+const statusText=
+item.status==="approved"
+?"APPROVED"
+:item.status==="rejected"
+?"REJECTED"
+:"PENDING";
+
+box.innerHTML+=`
+
+<div class="admin-record">
+
+<strong>
+${escapeHTML(item.nama)}
+</strong>
+
+${
+item.wilayah
+?
+`<span style="color:#aaa;">
+ — ${escapeHTML(item.wilayah)}
+</span>`
+:""
+}
+
+<br>
+
+<span>
+⭐ ${escapeHTML(item.rating)}/5
+</span>
+
+<span>
+ — ${escapeHTML(item.tipe)}
+</span>
+
+<br>
+
+<span class="guestbook-status ${statusClass}">
+${statusText}
+</span>
+
+<p style="
+color:#ddd;
+margin-top:10px;
+white-space:pre-line;
+">
+${escapeHTML(item.pesan)}
+</p>
+
+${
+date
+?
+`<p style="color:#888;font-size:12px;">
+📅 ${escapeHTML(date)}
+</p>`
+:""
+}
+
+<div class="admin-actions">
+
+${
+item.status!=="approved"
+?
+`
+<button
+class="btn btn-green"
+type="button"
+onclick="moderateGuestbook('${item.id}','approved')">
+✅ TERIMA
+</button>
+`
+:""
+}
+
+${
+item.status!=="rejected"
+?
+`
+<button
+class="btn btn-danger"
+type="button"
+onclick="moderateGuestbook('${item.id}','rejected')">
+❌ TOLAK
+</button>
+`
+:""
+}
+
+<button
+class="btn btn-dark"
+type="button"
+onclick="deleteGuestbook('${item.id}')">
+🗑️ HAPUS
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+function setGuestbookFilter(
+filter,
+button
+){
+
+guestbookAdminFilter=
+filter;
+
+document
+.querySelectorAll(
+".guestbook-admin-filter button"
+)
+.forEach(function(btn){
+
+btn.classList.remove("active");
+
+});
+
+if(button){
+
+button.classList.add("active");
+
+}
+
+loadAdminGuestbook();
+
+}
+
+async function moderateGuestbook(
+id,
+status
+){
+
+const actionText=
+status==="approved"
+?"menyetujui"
+:"menolak";
+
+if(!confirm(
+"Yakin ingin "+
+actionText+
+" pesan Buku Tamu ini?"
+))return;
+
+const {
+error
+}=
+await supabaseClient
+.from("buku_tamu")
+.update({
+status:status
+})
+.eq("id",id);
+
+if(error){
+
+alert(
+"❌ Gagal mengubah status:\n\n"+
+error.message
+);
+
+return;
+
+}
+
+await loadAdminGuestbook();
+
+/*
+Refresh public list setelah moderation.
+Jika status menjadi approved,
+pesan langsung akan masuk query publik.
+*/
+await loadPublicGuestbook();
+
+alert(
+status==="approved"
+?
+"✅ Buku Tamu berhasil disetujui dan sekarang tampil di halaman publik."
+:
+"❌ Buku Tamu berhasil ditolak."
+);
+
+}
+
+async function deleteGuestbook(id){
+
+if(!confirm(
+"Yakin ingin menghapus pesan Buku Tamu ini secara permanen?"
+))return;
+
+const {
+error
+}=
+await supabaseClient
+.from("buku_tamu")
+.delete()
+.eq("id",id);
+
+if(error){
+
+alert(
+"❌ Gagal menghapus Buku Tamu:\n\n"+
+error.message
+);
+
+return;
+
+}
+
+await loadAdminGuestbook();
+await loadPublicGuestbook();
+
+alert(
+"🗑️ Pesan Buku Tamu berhasil dihapus."
+);
+
+}
+
+async function updateDashboard(){
+
+try{
+
+const [
+pengurusResult,
+anggotaResult,
+kegiatanResult,
+galeriResult
+]=await Promise.all([
+
+supabaseClient
+.from("pengurus")
+.select("id",{
+count:"exact",
+head:true
+})
+.eq("status","AKTIF"),
+
+supabaseClient
+.from("anggota")
+.select("id",{
+count:"exact",
+head:true
+})
+.eq("status","AKTIF"),
+
+supabaseClient
+.from("kegiatan")
+.select("id",{
+count:"exact",
+head:true
+})
+.eq("status","AKTIF"),
+
+supabaseClient
+.from("galeri")
+.select("id",{
+count:"exact",
+head:true
+})
+.eq("status","TAYANG")
+
+]);
+
+document.getElementById(
+"statPengurus"
+).textContent=
+pengurusResult.count??0;
+
+document.getElementById(
+"statAnggota"
+).textContent=
+anggotaResult.count??0;
+
+document.getElementById(
+"statProgram"
+).textContent=
+kegiatanResult.count??0;
+
+document.getElementById(
+"statGallery"
+).textContent=
+galeriResult.count??0;
+
+}catch(error){
+
+console.error(
+"Dashboard:",
+error
+);
+
+}
+
+}
+
+async function loginAdmin(){
+
+const email=
+document.getElementById(
+"adminEmail"
+).value.trim();
+
+const password=
+document.getElementById(
+"adminPassword"
+).value;
+
+const message=
+document.getElementById(
+"loginMessage"
+);
+
+message.textContent=
+"⏳ Memeriksa akun admin...";
+
+const {
+data,
+error
+}=
+await supabaseClient.auth
+.signInWithPassword({
+
+email:email,
+password:password
+
+});
+
+if(error){
+
+console.error(error);
+
+message.textContent=
+"❌ Email atau password salah.";
+
+return;
+
+}
+
+if(!data.user){
+
+message.textContent=
+"❌ User tidak ditemukan.";
+
+await supabaseClient.auth.signOut();
+
+return;
+
+}
+
+if(
+data.user.id!==ADMIN_USER_ID
+){
+
+message.textContent=
+"❌ Akun ini tidak memiliki akses admin.";
+
+await supabaseClient.auth.signOut();
+
+return;
+
+}
+
+message.textContent="";
+
+showAdmin();
+
+setTimeout(function(){
+
+document.getElementById(
+"adminPanel"
+).scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+},300);
+
+}
+
+async function checkAdminSession(){
+
+const {
+data:{
+session
+}
+}=
+await supabaseClient.auth
+.getSession();
+
+if(
+session &&
+session.user &&
+session.user.id===ADMIN_USER_ID
+){
+
+showAdmin();
+
+}else{
+
+hideAdmin();
+
+}
+
+}
+
+function showAdmin(){
+
+document.getElementById(
+"adminLogin"
+).style.display="none";
+
+document.getElementById(
+"adminPanel"
+).style.display="block";
+
+loadAdminPengurus();
+loadAdminNews();
+loadAdminEvents();
+loadAdminGallery();
+loadAdminDocuments();
+loadAdminGuestbook();
+
+}
+
+function hideAdmin(){
+
+document.getElementById(
+"adminLogin"
+).style.display="block";
+
+document.getElementById(
+"adminPanel"
+).style.display="none";
+
+}
+
+async function logoutAdmin(){
+
+await supabaseClient.auth.signOut();
+
+hideAdmin();
+
+document.getElementById(
+"adminEmail"
+).value="";
+
+document.getElementById(
+"adminPassword"
+).value="";
+
+document.getElementById(
+"loginMessage"
+).textContent="";
+
+alert(
+"👋 Anda telah logout."
+);
+
+}
+
+supabaseClient.auth.onAuthStateChange(
+function(event,session){
+
+if(
+session &&
+session.user &&
+session.user.id===ADMIN_USER_ID
+){
+
+showAdmin();
+
+}else{
+
+hideAdmin();
+
+}
+
+}
+);
+
+function openAdminTab(
+tabId,
+button
+){
+
+document
+.querySelectorAll(".admin-content")
+.forEach(function(tab){
+
+tab.classList.remove("active");
+
+});
+
+document
+.querySelectorAll(".admin-tabs button")
+.forEach(function(btn){
+
+btn.classList.remove("active");
+
+});
+
+const target=
+document.getElementById(tabId);
+
+if(target){
+
+target.classList.add("active");
+
+}
+
+if(button){
+
+button.classList.add("active");
+
+}
+
+}
+
+const calendarData=[
+
+{
+year:2026,
+month:8,
+name:"September 2026",
+photo:"logo/photo1.png",
+caption:"📸 Kegiatan BOBOKO — September 2026"
+},
+
+{
+year:2026,
+month:9,
+name:"Oktober 2026",
+photo:"logo/photo2.png",
+caption:"📸 Kegiatan BOBOKO — Oktober 2026"
+},
+
+{
+year:2026,
+month:10,
+name:"November 2026",
+photo:"logo/photo3.png",
+caption:"📸 Kegiatan BOBOKO — November 2026"
+},
+
+{
+year:2026,
+month:11,
+name:"Desember 2026",
+photo:"logo/photo4.png",
+caption:"📸 Kegiatan BOBOKO — Desember 2026"
+}
+
+];
+
+let calendarIndex=0;
+
+function renderCalendar(){
+
+const item=
+calendarData[calendarIndex];
+
+document.getElementById(
+"monthYear"
+).textContent=item.name;
+
+document.getElementById(
+"calendarPhoto"
+).src=
+safeURL(item.photo);
+
+document.getElementById(
+"photoCaption"
+).textContent=
+item.caption;
+
+const grid=
+document.getElementById(
+"calendarGrid"
+);
+
+grid.innerHTML="";
+
+const days=[
+"Min",
+"Sen",
+"Sel",
+"Rab",
+"Kam",
+"Jum",
+"Sab"
+];
+
+days.forEach(function(day){
+
+grid.innerHTML+=`
+
+<div class="calendar-day-name">
+${day}
+</div>
+
+`;
+
+});
+
+const firstDay=
+new Date(
+item.year,
+item.month,
+1
+).getDay();
+
+const daysInMonth=
+new Date(
+item.year,
+item.month+1,
+0
+).getDate();
+
+for(
+let i=0;
+i<firstDay;
+i++
+){
+
+grid.innerHTML+=
+`<div></div>`;
+
+}
+
+const today=
+new Date();
+
+for(
+let day=1;
+day<=daysInMonth;
+day++
+){
+
+const isToday=
+today.getFullYear()===
+item.year &&
+today.getMonth()===
+item.month &&
+today.getDate()===
+day;
+
+grid.innerHTML+=`
+
+<div class="calendar-day ${
+isToday?"today":""
+}">
+${day}
+</div>
+
+`;
+
+}
+
+}
+
+function prevMonth(){
+
+if(calendarIndex>0){
+
+calendarIndex--;
+
+renderCalendar();
+
+}
+
+}
+
+function nextMonth(){
+
+if(
+calendarIndex<
+calendarData.length-1
+){
+
+calendarIndex++;
+
+renderCalendar();
+
+}
+
+}
+
+function orderCalendar(){
+
+alert(
+"🙏 Terima kasih\n\n"+
+"Kalender BOBOKO Premium\n"+
+"Edisi September–Desember 2026\n\n"+
+"Harga: Rp20.000\n\n"+
+"Informasi pemesanan akan segera tersedia."
+);
+
+}
+
+async function initializeApp(){
+
+renderCalendar();
+
+await Promise.all([
+
+loadPengurus(),
+
+loadNews(),
+
+loadDocuments(),
+
+loadGallery("Semua"),
+
+loadPublicGuestbook(),
+
+updateDashboard()
+
+]);
+
+await checkAdminSession();
+
+}
+
+initializeApp();
+
+</script>
+
+</body>
+</html>
